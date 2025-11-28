@@ -1,6 +1,9 @@
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
 
+import os
+PORT = int(os.environ.get('PORT', 8080))
+
 # Твой токен от BotFather (создай бота в Telegram через @BotFather и вставь токен здесь)
 TOKEN = '8318410343:AAFpLxtj4bnqjaOIku3wY_N-kU9vPtGw3vg'
 
@@ -85,4 +88,5 @@ def handle_message(message):
         del user_data[chat_id]
 
 # Запуск бота
+
 bot.polling()
